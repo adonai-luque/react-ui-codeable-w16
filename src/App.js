@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import React from "react";
 
 const App = () => {
-  console.log("Inside App.js");
   return (
     <>
       <Header />

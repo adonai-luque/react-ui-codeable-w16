@@ -1,3 +1,4 @@
+import "../stylesheets/Header.css"
 import Link from "./Link"
 
 const Header = () => {

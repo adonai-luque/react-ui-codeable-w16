@@ -18,7 +18,7 @@ const CardsByDay = ({ date, cards }) => {
   ];
 
   return (
-    <section className="section">
+    <section className="cards-by-day">
       <h2 className="title">
         {`${day(date)} de ${months[month(date)]} de ${year(date)}`}
       </h2>
