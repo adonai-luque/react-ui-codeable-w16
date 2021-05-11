@@ -1,0 +1,23 @@
+.cards-by-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 32px 0;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: min(4vw, 32px);
+  margin: min(2vw, 16px);;
+}

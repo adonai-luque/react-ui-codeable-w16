@@ -1,0 +1,20 @@
+.link {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  margin: 0 4px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 24px;
+  font-family: inherit !important;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.link.active {
+  background-color: black;
+  color: white;
+}

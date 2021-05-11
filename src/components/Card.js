@@ -1,3 +1,5 @@
+import "../stylesheets/Card.css";
+
 const Card = ({ title, body, img, big }) => {
   return (
     <div className={big ? "card big" : "card"}>

@@ -1,5 +1,6 @@
 import Card from "./Card";
 import { year, month, day } from "../date";
+import "../stylesheets/CardsByDay.css";
 
 const CardsByDay = ({ date, cards }) => {
   const months = [
@@ -24,15 +25,8 @@ const CardsByDay = ({ date, cards }) => {
       </h2>
       <div className="card-list">
         {cards.map((card) => {
-          const { title, body, image, big } = card
-          return (
-            <Card
-              title={title}
-              body={body}
-              img={image}
-              big={big}
-            />
-          );
+          const { title, body, image, big } = card;
+          return <Card title={title} body={body} img={image} big={big} />;
         })}
       </div>
     </section>
