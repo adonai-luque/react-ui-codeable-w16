@@ -19,10 +19,10 @@ const CardsByDay = ({ date, cards }) => {
 
   return (
     <section className="section">
-      <h2 className="section__title">
+      <h2 className="title">
         {`${day(date)} de ${months[month(date)]} de ${year(date)}`}
       </h2>
-      <div className="section__card-list">
+      <div className="card-list">
         {cards.map((card) => {
           const { title, body, image, big } = card
           return (
