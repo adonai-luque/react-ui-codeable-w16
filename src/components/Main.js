@@ -1,19 +1,30 @@
-import { store } from './../store.js'
-import Section from './Section.js'
+import { store } from "./../store.js";
+import CardsByDay from "./CardsByDay.js";
 
-export default function Main() {
-  let dates = [...new Set(store.cards.map((card) => (card.date)).sort().reverse())];
-  function filteredCards(cards, date) {
-    return cards.filter((card) => (card.date === date));
-  }
+function Main() {
+  let datesMap = {};
+  let cards = store.cards;
+  let dates = cards
+    .map((card) => card.date)
+    .filter((date) => (datesMap[date] ? false : (datesMap[date] = true)))
+    .sort((a, b) => (a > b ? -1 : 1));
   
+    function filteredCards(cards, date) {
+    return cards.filter((card) => card.date === date);
+  }
+
   return (
     <main className="main">
       {dates.map((date) => {
         return (
-          <Section date={date} filteredCards={ filteredCards(store.cards, date) } />
+          <CardsByDay
+            date={date}
+            cards={filteredCards(cards, date)}
+          />
         );
       })}
-    </main>    
+    </main>
   );
-};
+}
+
+export default Main;
